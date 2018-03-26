@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FirstCSharp.Properties
+namespace STracker.Properties
 {
 
 

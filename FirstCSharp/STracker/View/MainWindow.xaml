@@ -1,0 +1,23 @@
+﻿<Window x:Class="FirstCSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstCSharp"
+        xmlns:ViewModel="clr-namespace:FirstCSharp.ViewModel"
+        mc:Ignorable="d"
+        Title="Subject Tracker" Height="748" Width="1024" MinHeight="768" MinWidth="1024">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <ViewModel:MainViewModel x:Key="MainViewModelDataSource" d:IsDataSource="True"/>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Mode="OneWay" Source="{StaticResource MainViewModelDataSource}"/>
+    </Window.DataContext>
+    <Grid>
+        <Label Content="Hello world!" Visibility="{Binding SecondViewModel.TempVis, Converter={StaticResource BoolToVis}}" HorizontalAlignment="Left" Margin="155,71,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" Cursor="Hand" Click="Button_Click" HorizontalAlignment="Left" Margin="121,144,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
