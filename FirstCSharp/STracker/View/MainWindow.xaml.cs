@@ -33,9 +33,9 @@ namespace FirstCSharp
             mvm = DataContext as MainViewModel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void equalBtnClick(object sender, RoutedEventArgs e)
         {
-            mvm.SecondViewModel.ToggleVis();
+            mvm.CalculatorViewModel.equalsClick();
         }
     }
 }

@@ -25,11 +25,11 @@ namespace FirstCSharp.ViewModel
 
         #region viewmodel creation
         //ViewModels
-        private SecondViewModel _secondViewModel;
-        public SecondViewModel SecondViewModel
+        private CalculatorViewModel _calculatorviewmodel;
+        public CalculatorViewModel CalculatorViewModel
         {
-            get { return _secondViewModel; }
-            set { _secondViewModel = value; OnPropertyChanged("SecondViewModel"); }
+            get { return _calculatorviewmodel; }
+            set { _calculatorviewmodel = value; OnPropertyChanged("CalculatorViewModel"); }
         }
         #endregion
 
@@ -46,7 +46,7 @@ namespace FirstCSharp.ViewModel
         public MainViewModel()
         {
             _mvm = this;
-            SecondViewModel = new SecondViewModel(this);
+            CalculatorViewModel = new CalculatorViewModel(this);
         }
         #endregion
     }

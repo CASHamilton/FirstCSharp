@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FirstCSharp"
         xmlns:ViewModel="clr-namespace:FirstCSharp.ViewModel"
         mc:Ignorable="d"
-        Title="Subject Tracker" Height="748" Width="1024" MinHeight="768" MinWidth="1024">
+        Title="Budgeting Program" Height="748" Width="1024" MinHeight="768" MinWidth="1024">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         <ViewModel:MainViewModel x:Key="MainViewModelDataSource" d:IsDataSource="True"/>
@@ -16,8 +16,23 @@
         <Binding Mode="OneWay" Source="{StaticResource MainViewModelDataSource}"/>
     </Window.DataContext>
     <Grid>
-        <Label Content="Hello world!" Visibility="{Binding SecondViewModel.TempVis, Converter={StaticResource BoolToVis}}" HorizontalAlignment="Left" Margin="155,71,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" Cursor="Hand" Click="Button_Click" HorizontalAlignment="Left" Margin="121,144,0,0" VerticalAlignment="Top" Width="75"/>
+        <!--Operators-->
+        <Button x:Name="equalsBtn" Content="=" Click= "equalBtnClick" FontSize="50" Margin="805,571,0,0" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top"/>
+        <Button x:Name="minusBtn" Content="-" FontSize="50" Margin="803,452,0,0" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top"/>
+        <Button x:Name= "plusBtn" Content="+" FontSize="50" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="805,333,0,0"/>
+        <Button x:Name= "divisionBtn" Content="÷" FontSize="50" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="805,209,0,0"/>
+        <Button x:Name= "multiplicationBtn" Content="x" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="803,84,0,0"/>
+        <!--Numberpad-->
+        <Button x:Name="num1Btn" Content="1" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="97,456,0,0"/>
+        <Button x:Name= "num2Btn" Content="2" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="273,456,0,0"/>
+        <Button x:Name= "num3Btn" Content="3" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="449,456,0,0"/>
+        <Button x:Name= "num4Btn" Content="4" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="97,352,0,0"/>
 
+        <Button x:Name= "num5Btn" Content="5" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="273,352,0,0"/>
+        <Button x:Name= "num6Btn" Content="6" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="449,352,0,0"/>
+        <Button x:Name= "num7Btn" Content="7" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="97,233,0,0"/>
+        <Button x:Name= "num8Btn" Content="8" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="273,233,0,0"/>
+        <Button x:Name= "num9Btn" Content="9" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="176" Height="119" VerticalAlignment="Top" Margin="449,233,0,0"/>
+        <Button x:Name= "num0Btn" Content="0" FontSize="40" RenderTransformOrigin="0.433,2.723" HorizontalAlignment="Left" Width="528" Height="119" VerticalAlignment="Top" Margin="97,571,0,0"/>
     </Grid>
 </Window>
