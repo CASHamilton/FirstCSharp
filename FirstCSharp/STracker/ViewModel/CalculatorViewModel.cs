@@ -37,7 +37,11 @@ namespace FirstCSharp.ViewModel
 
         #region properties
         private float _result;
-        public float Result        {            set { _result = value; OnPropertyChanged("Result"); }            get { return _result; }        }
+        public float Result
+        {
+            set { _result = value; OnPropertyChanged("Result"); }
+            get { return _result; }
+        }
 
 
 
@@ -56,7 +60,62 @@ namespace FirstCSharp.ViewModel
 
 
         }
+        public void minusclick()
+            {
 
+        }
+        public void plusclick()
+        {
+
+        }
+        public void divisionclick()
+        {
+
+        }
+        public void multiplicationclick()
+        {
+
+        }
+        public void num0click()
+        {
+
+        }
+        public void num1click()
+        {
+
+        }
+        public void num2click()
+        {
+
+        }
+        public void num3click()
+        {
+
+        }
+        public void num4click()
+        {
+
+        }
+        public void num5click()
+        {
+
+        }
+        public void num6click()
+        {
+
+        }
+        public void num7click()
+        {
+
+        }
+        public void num8click()
+        {
+
+        }
+        public void num9click()
+        {
+
+        }
 
 
         #endregion
