@@ -35,23 +35,25 @@ namespace FirstCSharp.ViewModel
         }
         #endregion  //no need to edit anything in this region
 
-        #region properties
-        private float _result;
-        public float Result
-        {
-            set { _result = value; OnPropertyChanged("Result"); }
-            get { return _result; }
-        }
-
-
-
-
-        #endregion
+         #region properties        private string _row;        public string Row        {            set
+            {
+                if (_row.Length < 10)
+                {
+                    _row = value;
+                }
+                else
+                {
+                    Console.WriteLine("row exceeded max length");
+                }
+                OnPropertyChanged("Row");
+            }            get { return _row; }        }        #endregion
 
         #region methods
         private void Constructor()
         {
-            Result = 0;
+            _row = "";
+            Row = "";
+
         }
 
         public void equalsClick()
@@ -78,7 +80,7 @@ namespace FirstCSharp.ViewModel
         }
         public void num0click()
         {
-
+            Row = Row + "0";
         }
         public void num1click()
         {
