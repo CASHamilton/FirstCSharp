@@ -1,7 +1,9 @@
-# FirstCSharp
-My first CSharp project
-## Description 
-This program will do stuff and it will be awesome.
-## Idea's 
-- Distance Shape Calculator
-## Budgeting Program 
+# Cairo-CSharp
+My project for teaching Cairo C#
+
+## Description
+This program will do something mentioned below and it will be awesome.
+
+## Ideas
+- Distance and shape calculator
+- Budgeting program

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
-namespace FirstCSharp.ViewModel
+namespace Cario_CSharp.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
@@ -25,11 +25,11 @@ namespace FirstCSharp.ViewModel
 
         #region viewmodel creation
         //ViewModels
-        private CalculatorViewModel _calculatorviewmodel;
+        private CalculatorViewModel _calculatorViewModel;
         public CalculatorViewModel CalculatorViewModel
         {
-            get { return _calculatorviewmodel; }
-            set { _calculatorviewmodel = value; OnPropertyChanged("CalculatorViewModel"); }
+            get { return _calculatorViewModel; }
+            set { _calculatorViewModel = value; OnPropertyChanged("CalculatorViewModel"); }
         }
         #endregion
 

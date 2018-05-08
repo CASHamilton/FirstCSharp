@@ -1,7 +1,7 @@
-﻿<Application x:Class="FirstCSharp.App"
+﻿<Application x:Class="Cario_CSharp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FirstCSharp"
+             xmlns:local="clr-namespace:Cario_CSharp"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
          
