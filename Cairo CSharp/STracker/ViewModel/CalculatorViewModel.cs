@@ -118,13 +118,20 @@ namespace Cario_CSharp.ViewModel
                 {
                     case "+":
                         LastOperation += Row;
-                        Num1 += Convert.ToDouble(Row);                        break;                    case "-":
+                        Num1 += Convert.ToDouble(Row);
+                        break;
+                    case "-":
                         LastOperation += Row;
-                        Num1 -= Convert.ToDouble(Row);                        break;                    case "*":
+                        Num1 -= Convert.ToDouble(Row);
+                        break;
+                    case "*":
                         LastOperation += Row;
-                        Num1 *= Convert.ToDouble(Row);                        break;                    case "/":
+                        Num1 *= Convert.ToDouble(Row);
+                        break;
+                    case "/":
                         LastOperation += Row;
-                        Num1 /= Convert.ToDouble(Row);                        break;
+                        Num1 /= Convert.ToDouble(Row);
+                        break;
 
                 }
 

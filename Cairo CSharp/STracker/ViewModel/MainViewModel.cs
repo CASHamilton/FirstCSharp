@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
+using Cario_CSharp.ViewModel;
+
 namespace Cario_CSharp.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
@@ -47,6 +49,11 @@ namespace Cario_CSharp.ViewModel
         {
             _mvm = this;
             CalculatorViewModel = new CalculatorViewModel(this);
+        }
+
+        public void Signup(string username, string password)
+        {
+            //using (var ent = new data)
         }
         #endregion
     }

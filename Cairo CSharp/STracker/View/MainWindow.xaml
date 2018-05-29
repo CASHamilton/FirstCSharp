@@ -16,31 +16,60 @@
         <Binding Mode="OneWay" Source="{StaticResource MainViewModelDataSource}"/>
     </Window.DataContext>
     <Grid>
-        <!-- FUNTIONALITY -->
-        <Label Content="{Binding CalculatorViewModel.Row}" FontSize="70" Margin="130,147,0,0" HorizontalAlignment="Left" Width="424" Height="97" VerticalAlignment="Top" />
-        <Label Content="{Binding CalculatorViewModel.Operator}" FontSize="70" Margin="580,147,0,0" HorizontalAlignment="Left" Width="138" Height="97" VerticalAlignment="Top" />
-        <!-- OPERATORS -->
-        <Button x:Name="equalsBtn" Content="=" Click="equalBtnClick" FontSize="50" Margin="769,564,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="subtractBtn" Click="subtractionBtn_Click" Content="-" FontSize="50" Margin="769,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="additionBtn" Click="additionBtn_Click" Content="+" FontSize="50" Margin="769,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="multiplicationBtn" Click="multiplicationBtn_Click" Content="x" FontSize="40" Margin="769,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="divisionBtn" Content="÷" FontSize="50" Margin="769,172,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+        <TabControl>
+            <TabItem Header="Login/Signup">
+                <Grid>
+                    <!--LOGIN-->
+                    <Label Content="Username:" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" Margin="10,12,0,0"/>
+                    <TextBox x:Name="Signup_Username" Margin="80,12,0,0" HorizontalAlignment="Left" Width="176" Height="26" VerticalAlignment="Top"/>
+                    <PasswordBox x:Name="Signup_Password" Margin="80,43,0,0" HorizontalAlignment="Left" Width="176" Height="26" VerticalAlignment="Top"/>
+                    <Label Content="Password:" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" Margin="10,43,0,0"/>
+                    <Button x:Name="Signup_Button" Click="Signup_Button_Click" Content="Sign Up" HorizontalAlignment="Left" Width="80" Height="39
+                            " VerticalAlignment="Top" Margin="176,74,0,0"/>
+                    <!--SIGNUP-->
 
-        <!-- NUMBER PAD -->
-        <Button x:Name="num1Btn" Click="num1Btn_Click" Content="1" FontSize="50" Margin="130,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num2Btn" Click="num2Btn_Click" Content="2" FontSize="50" Margin="273,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num3Btn" Click="num3Btn_Click" Content="3" FontSize="50" Margin="416,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num4Btn" Click="num4Btn_Click" Content="4" FontSize="50" Margin="130,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num5Btn" Click="num5Btn_Click" Content="5" FontSize="50" Margin="273,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num6Btn" Click="num6Btn_Click" Content="6" FontSize="50" Margin="416,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num7Btn" Click="num7Btn_Click" Content="7" FontSize="50" Margin="130,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num8Btn" Click="num8Btn_Click" Content="8" FontSize="50" Margin="273,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num9Btn" Click="num9Btn_Click" Content="9" FontSize="50" Margin="416,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
-        <Button x:Name="num0Btn" Click="num0Btn_Click" Content="0" FontSize="50" Margin="130,564,0,0" HorizontalAlignment="Left" Width="424" Height="93" VerticalAlignment="Top"/>
-        <Label Content="{Binding CalculatorViewModel.Teaser}" FontSize="70" Margin="130,45,0,0" HorizontalAlignment="Left" Width="424" Height="97" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Calculator">
+                <Grid>
+                    <!-- FUNTIONALITY -->
+                    <Label Content="{Binding CalculatorViewModel.Row}" FontSize="70" Margin="130,147,0,0" HorizontalAlignment="Left" Width="424" Height="97" VerticalAlignment="Top" />
+                    <Label Content="{Binding CalculatorViewModel.Operator}" FontSize="70" Margin="580,147,0,0" HorizontalAlignment="Left" Width="138" Height="97" VerticalAlignment="Top" />
+                    <!-- OPERATORS -->
+                    <Button x:Name="equalsBtn" Content="=" Click="equalBtnClick" FontSize="50" Margin="769,564,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="subtractBtn" Click="subtractionBtn_Click" Content="-" FontSize="50" Margin="769,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="additionBtn" Click="additionBtn_Click" Content="+" FontSize="50" Margin="769,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="multiplicationBtn" Click="multiplicationBtn_Click" Content="x" FontSize="40" Margin="769,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="divisionBtn" Content="÷" FontSize="50" Margin="769,172,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+
+                    <!-- NUMBER PAD -->
+                    <Button x:Name="num1Btn" Click="num1Btn_Click" Content="1" FontSize="50" Margin="130,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num2Btn" Click="num2Btn_Click" Content="2" FontSize="50" Margin="273,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num3Btn" Click="num3Btn_Click" Content="3" FontSize="50" Margin="416,466,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num4Btn" Click="num4Btn_Click" Content="4" FontSize="50" Margin="130,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num5Btn" Click="num5Btn_Click" Content="5" FontSize="50" Margin="273,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num6Btn" Click="num6Btn_Click" Content="6" FontSize="50" Margin="416,368,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num7Btn" Click="num7Btn_Click" Content="7" FontSize="50" Margin="130,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num8Btn" Click="num8Btn_Click" Content="8" FontSize="50" Margin="273,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num9Btn" Click="num9Btn_Click" Content="9" FontSize="50" Margin="416,270,0,0" HorizontalAlignment="Left" Width="138" Height="93" VerticalAlignment="Top"/>
+                    <Button x:Name="num0Btn" Click="num0Btn_Click" Content="0" FontSize="50" Margin="130,564,0,0" HorizontalAlignment="Left" Width="424" Height="93" VerticalAlignment="Top"/>
+                    <Label Content="{Binding CalculatorViewModel.Teaser}" FontSize="70" Margin="130,45,0,0" HorizontalAlignment="Left" Width="424" Height="97" VerticalAlignment="Top" />
 
 
 
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Income">
+
+            </TabItem>
+            <TabItem Header="Expenses">
+
+            </TabItem>
+            <TabItem Header="Results">
+
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>

@@ -104,5 +104,10 @@ namespace Cario_CSharp
         {
             mvm.CalculatorViewModel.subtractionClick();
         }
+
+        private void Signup_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
