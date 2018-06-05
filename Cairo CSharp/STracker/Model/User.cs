@@ -17,5 +17,6 @@ namespace STracker.Model
         public int userid { get; set; }
         public string username { get; set; }
         public string password { get; set; }
+        public System.DateTime lastLogin { get; set; }
     }
 }

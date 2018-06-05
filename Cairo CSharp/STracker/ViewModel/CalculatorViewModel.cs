@@ -98,6 +98,8 @@ namespace Cario_CSharp.ViewModel
 
         #region methods
 
+
+
         private void Constructor()
         {
             _row = "";

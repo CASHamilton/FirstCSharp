@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
@@ -107,7 +107,10 @@ namespace Cario_CSharp
 
         private void Signup_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Signup_Username.Text != "" && Signup_Password.Password.ToString() != "")
+            {
+                mvm.Signup(Signup_Username.Text, Signup_Password.Password.ToString());
+            }
         }
     }
 }

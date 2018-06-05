@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
-using Cario_CSharp.ViewModel;
+using STracker.Model;
 
 namespace Cario_CSharp.ViewModel
 {
@@ -49,11 +49,52 @@ namespace Cario_CSharp.ViewModel
         {
             _mvm = this;
             CalculatorViewModel = new CalculatorViewModel(this);
+
+            //using (var ent = new dataEntities())
+            //{
+            //    var date = DateTime.Now.AddMonths(-5);
+            //    var oldUsers = (from a in ent.User where a.lastLogin <= date select a).ToList();
+            //    foreach(var i in oldUsers)
+            //    {
+            //        ent.User.Remove(i);
+            //    }
+            //    ent.SaveChanges();
+            //}
         }
 
         public void Signup(string username, string password)
         {
-            //using (var ent = new data)
+            try
+            {
+                using (var ent = new dataEntities())
+                {
+                    var temp = (from a in ent.User where a.username == username select a).FirstOrDefault();
+                    if(temp != null)
+                    {
+                        //show some alert saying this cant be done TODO
+                        return;
+                    }
+                    else
+                    {
+                        var newUser = new User();
+                        newUser.username = username;
+                        newUser.password = password;
+                        newUser.lastLogin = DateTime.Now;
+
+                        ent.User.Add(newUser);
+                        ent.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //DO THIS LATER
+            }
+        }
+
+        public void Login(string username, string password)
+        {
+
         }
         #endregion
     }
